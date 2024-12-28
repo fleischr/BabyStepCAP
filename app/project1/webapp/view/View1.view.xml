@@ -1,0 +1,32 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    	<List
+		items="{/Books}"
+		headerText="Books">
+		<ObjectListItem
+			title="{title}"
+			type="Active"
+			press="onBookPress"
+			number="{
+				parts:[{path:'price'},{path:'currency'}],
+				type: 'sap.ui.model.type.Currency',
+				formatOptions: {showMeasure: false}
+			}"
+			numberUnit="{currency}">
+			<firstStatus>
+				<ObjectStatus
+					text="{statusText}"
+					state="{
+						path: 'status',
+						formatter: '.formatter.status'
+					}" />
+			</firstStatus>
+            <ObjectAttribute text="Author: {author}" />
+			<ObjectAttribute text="{stock} in stock" />
+			<ObjectAttribute text="ISBN: {ISBN}" />
+		</ObjectListItem>
+	</List>
+    </Page>
+</mvc:View>

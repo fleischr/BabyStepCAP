@@ -1,0 +1,6 @@
+ID,title,stock,author,price,currency,status,statusText,ISBN
+1,Wuthering Heights,100,Emily Bronte,15.99,USD,0,Available,978-2-2699-9980-6
+2,Jane Eyre,500,Charlotte Bronte,12.59,USD,0,Available,978-3-4313-7281-6
+3,SoftWar,1,Jason Lowery,210.00,USD,2,Shipments on hold,978-4-8987-5746-8
+4,Hand Hand Fingers Thumb,250,Al Perkins,4.77,USD,1,Clearance,978-0-3774-3487-5
+5,Mastery,120,Robert Greene,39.99,USD,1,Missing Stock,978-1-6010-3444-1
