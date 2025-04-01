@@ -90,13 +90,16 @@ With the tiny sample activated - you ought to already have a cat-servivce.cds fi
 
 For simple queries of the entity sets - no additional business logic is needed. But we all know enterprise apps aren't always so simple! What if you want to add other functions and pre/post processing of the data? This where your node.js javascript handler will assist your requirement.
 
-Later we'll be working through one such custom logic example - by adding a function called getExternalHash to generate unique, verifiable identifiers for the books
+Later we'll be working through one such custom logic example - by adding a function called getExternalHash to generate unique, verifiable identifiers for the books.
+
+Your service definition (e.g. cat-service.cds) should look like this. Note the <i>function</i> and <i>action</i> we added. 
+```
 using my.bookshop as my from '../db/schema';
 
-```
 service CatalogService {
     @readonly entity Books as projection on my.Books;
-    <b>function getExternalHash(productID: Integer) returns String;</b>
+    function getExternalHash(productID: Integer) returns String;
+    action restockBooks(data: bookRestock) returns String;
 }
 ```
 
